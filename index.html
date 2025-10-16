@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Attribute — Discover What Defines You</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">Attribute</div>
+    <div class="top-links">
+      <a class="btn-link" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+      <a class="btn-link" href="https://pump.fun/" target="_blank" rel="noopener noreferrer" aria-label="Pump.fun">Pump.fun</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Discover What Defines You</h1>
+      <p class="lead">Everyone is a unique combination of attributes. Pick the ones that feel like you.</p>
+      <div class="hero-actions">
+        <button id="startBtn" class="primary">Start Exploring</button>
+        <button id="examplesBtn" class="ghost">See Examples</button>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2>What is Attribute?</h2>
+      <p>Attribute is a lightweight, reflective experience that helps you think about what makes you unique — your habits, skills, and personality traits. Choose attributes, build a profile, and share it with others.</p>
+    </section>
+
+    <section class="how" id="how">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Select</h3>
+            <p>Pick attributes that resonate with who you are.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Generate</h3>
+            <p>Create a short link representing your selection.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Share</h3>
+            <p>Send your profile link to friends or post it online.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="picker" id="picker">
+      <h2>Choose Your Attributes</h2>
+      <p class="muted">Click to toggle. You can select as many as you like.</p>
+      <div id="cards" class="cards-grid" aria-live="polite"></div>
+      <div class="picker-actions">
+        <button id="clearBtn" class="ghost">Clear</button>
+        <button id="generateBtn" class="primary">Generate My Link</button>
+      </div>
+    </section>
+
+    <section class="examples" id="examples">
+      <h2>Example Profiles</h2>
+      <div class="profiles">
+        <div class="profile">
+          <h4>The Explorer</h4>
+          <p class="profile-attrs">Curious · Bold · Adaptable</p>
+          <p class="profile-desc">Always looking for new experiences and adapting quickly to change.</p>
+        </div>
+        <div class="profile">
+          <h4>The Visionary</h4>
+          <p class="profile-attrs">Creative · Analytical · Resilient</p>
+          <p class="profile-desc">Combines imagination with structured thinking and persistence.</p>
+        </div>
+        <div class="profile">
+          <h4>The Empath</h4>
+          <p class="profile-attrs">Empathic · Intuitive · Focused</p>
+          <p class="profile-desc">Understands others, trusts instincts, and follows through.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="details" id="details">
+      <h2>Attributes as Building Blocks</h2>
+      <p>Think of attributes like design tokens or small modules in code — simple pieces that build complex systems. Each attribute here has a short description you can view by hovering or focusing on a card.</p>
+      <div class="detail-grid">
+        <div class="detail">
+          <h4>Design</h4>
+          <p>Attributes shape how you present yourself and what you prioritize.</p>
+        </div>
+        <div class="detail">
+          <h4>Work</h4>
+          <p>Professional traits show how you approach problems and collaborate.</p>
+        </div>
+        <div class="detail">
+          <h4>Growth</h4>
+          <p>Growth attributes reflect learning style and resilience under pressure.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 Attribute. All rights reserved.</div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

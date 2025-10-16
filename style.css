@@ -1,0 +1,137 @@
+:root{
+  --bg: #f5f9fc;
+  --card: #ffffff;
+  --muted: #7b8ca6;
+  --accent: #5daafc;
+  --shadow: 0 6px 18px rgba(26,43,76,0.08);
+  --radius: 12px;
+  font-family: "Cormorant Garamond", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+.container{max-width:1000px;margin:0 auto;padding:28px;}
+
+/* header */
+.site-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 28px;
+  background:transparent;
+  position:sticky;
+  top:0;
+  z-index:30;
+}
+.brand{font-weight:700;font-size:20px;letter-spacing:0.4px}
+.top-links{display:flex;gap:10px}
+.btn-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px 12px;
+  border-radius:10px;
+  background:transparent;
+  border:1px solid rgba(15,23,42,0.06);
+  text-decoration:none;
+  color:inherit;
+  font-weight:600;
+  transition:transform .15s ease, background .15s ease;
+}
+.btn-link:hover{transform:translateY(-2px);background:rgba(255,255,255,0.6)}
+
+/* hero */
+.hero{
+  margin-top:10px;
+  padding:42px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.8));
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+.hero h1{font-size:34px;margin:0 0 12px}
+.lead{margin:0 auto 18px;max-width:680px;color:var(--muted)}
+
+/* buttons */
+.primary{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+  box-shadow:0 6px 14px rgba(43,108,176,0.18);
+}
+.primary:hover{transform:translateY(-2px)}
+.ghost{
+  background:transparent;border:1px solid rgba(15,23,42,0.06);padding:10px 14px;border-radius:10px;cursor:pointer;margin-left:8px;
+}
+
+/* sections */
+section{margin:28px 0;padding:18px}
+.about, .how, .details{background:var(--card);border-radius:12px;padding:20px;box-shadow:var(--shadow)}
+.how .steps{display:flex;gap:12px;flex-wrap:wrap}
+.step{display:flex;gap:12px;align-items:flex-start;padding:12px 8px;background:transparent;border-radius:10px}
+.step-num{width:36px;height:36px;border-radius:10px;background:#eef2ff;color:#1e3a8a;display:flex;align-items:center;justify-content:center;font-weight:700}
+
+/* picker */
+.picker{background:transparent;padding:18px}
+.cards-grid{
+  display:grid;
+  gap:12px;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  margin-top:12px;
+}
+.card{
+  background:var(--card);
+  border-radius:12px;
+  padding:14px;
+  box-shadow:var(--shadow);
+  cursor:pointer;
+  border:1px solid rgba(15,23,42,0.03);
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  user-select:none;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.card h3{margin:0;font-size:16px}
+.card p{margin:0;color:var(--muted);font-size:13px}
+.card:hover{transform:translateY(-6px)}
+.card.selected{border-color:rgba(43,108,176,0.28);box-shadow:0 10px 24px rgba(43,108,176,0.08);transform:translateY(-8px)}
+
+/* picker actions */
+.picker-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
+
+/* examples */
+.examples .profiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.profile{background:var(--card);padding:14px;border-radius:12px;box-shadow:var(--shadow)}
+
+/* details */
+.detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px}
+.detail{background:var(--card);padding:14px;border-radius:10px;box-shadow:var(--shadow)}
+
+/* footer */
+.site-footer{text-align:center;padding:18px;color:var(--muted);font-size:14px}
+
+/* toast */
+.toast{
+  position:fixed;right:18px;bottom:18px;background:#0f172a;color:white;padding:12px 14px;border-radius:10px;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);transition:opacity .18s, transform .18s;
+}
+.toast.show{opacity:1;transform:translateY(0)}
+
+/* responsive tweaks */
+@media (max-width:640px){
+  .container{padding:18px;}
+  .hero h1{font-size:26px}
+  .site-header{padding:10px 16px}
+}
